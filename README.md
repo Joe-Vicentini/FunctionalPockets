@@ -2,13 +2,13 @@
 
 Build 42 development prototype: one combined pocket container per eligible garment. No individual-pocket mode.
 
-**Not ready for gameplay.** By default the mod only loads classification functions; it does not change clothing or add storage. The experimental native-container path changes the Java item type and cannot guarantee original clothing protection, insulation, wetness, tailoring, or save compatibility. Never enable it on an existing or important save. Multiplayer is disabled for the experiment.
+**Not ready for gameplay.** The experimental native-container path is enabled by default in single-player for testing. The experimental native-container path changes the Java item type and cannot guarantee original clothing protection, insulation, wetness, tailoring, or save compatibility. Never enable it on an existing or important save. Multiplayer is disabled for the experiment.
 
 ## Layout
 
 - `42/mod.info`: Build 42.13+ mod metadata (minimum is an API target, not a tested version).
 - `42/media/lua/shared/FunctionalPockets/Rules.lua`: centralized classification, profiles, overrides, tags, capacity modifiers and bulky-item policy.
-- `42/media/lua/shared/FunctionalPockets/Native.lua`: script adapter and opt-in native container experiment.
+- `42/media/lua/shared/FunctionalPockets/Native.lua`: script adapter and enabled experimental native container conversion.
 - `tests/classifier.lua`: standalone classification regression tests; run `lua tests/classifier.lua` from the repository root.
 
 ## Compatibility rules
@@ -28,9 +28,9 @@ The override fields are total capacity, weight reduction percentage, and maximum
 
 Build 42 exposes distinct Java Clothing and InventoryContainer classes, each with its own serialization and class-specific methods. Item scripts have a single ItemType; container capacity is integer-valued. The experiment uses the native container item type, garment body location, native capacity/weight reduction and acceptance callback. Native capacity is rounded upward; the callback attempts to enforce the fractional profile limit and reject bulky/nested items. This is an unverified approximation, not geometric size detection. Inventory transfer time is unchanged.
 
-To investigate in a disposable **new single-player** world only, set the local `experimental` flag in Native.lua to true before launching with the mod enabled. The boot-time conversion and admission callbacks must be verified against the target game version before treating this as functional. Do not toggle it within a save; restart the game between experiments. If the boot hook is too early for the active mod scripts, conversion may not occur.
+To investigate, enable the mod and launch a disposable **new single-player** world only. The local `experimental` flag in Native.lua is now true by default. The boot-time conversion and admission callbacks must be verified against the target game version before treating this as functional. Do not toggle it within a save; restart the game between experiments. If the boot hook is too early for the active mod scripts, conversion may not occur.
 
-Before enabling by default, test native inventory tabs, independent instances, actual carried weight, transfer restrictions (including batch transfers), equip/unequip, dropping, storage and save/reload, zombie outfits, hood variants, clothing protection/thermal stats, wetness, tailoring, and later server-authoritative behavior. A supported way to retain the actual Clothing class while providing native storage remains unresolved.
+Before treating the experiment as ready for gameplay, test native inventory tabs, independent instances, actual carried weight, transfer restrictions (including batch transfers), equip/unequip, dropping, storage and save/reload, zombie outfits, hood variants, clothing protection/thermal stats, wetness, tailoring, and later server-authoritative behavior. A supported way to retain the actual Clothing class while providing native storage remains unresolved.
 
 ## References
 

@@ -1,9 +1,9 @@
 require "FunctionalPockets/Rules"
 local FP = FunctionalPockets
 
--- Developer-only experiment, NOT a production gameplay option.
--- Change to true only for a disposable NEW single-player world.
-local experimental = false
+-- Enabled for experimental testing, NOT production gameplay.
+-- Use only in a disposable NEW single-player world.
+local experimental = true
 local converted = {}
 
 function FP.classifyScript(script)
