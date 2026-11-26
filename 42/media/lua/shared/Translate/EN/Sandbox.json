@@ -7,5 +7,7 @@
     "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Vanilla",
     "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Pockets - Keep Overflow",
     "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Pockets - Drop Overflow",
-    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Pockets - Delete Overflow"
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Pockets - Delete Overflow",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pocket Capacity Loss from Holes",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Holes in mapped pocket regions remove one pocket's share of the garment's original capacity per distinct damaged region (e.g. 1/4 for four pockets, 1/6 or 1/8 for cargo trousers). Remaining capacity is rounded upward. Random items fall onto the ground until the contents fit. Holes elsewhere do not count. Repairing holes restores capacity. Body regions are approximate; multiple pockets may share one region."
 }

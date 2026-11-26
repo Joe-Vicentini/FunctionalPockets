@@ -21,15 +21,87 @@ function FP.classifyScript(script)
     return FP.classify(script:getFullName(), script:getName(), tostring(location), tags, true, false)
 end
 
+local function damageEnabled()
+    local options = SandboxVars and SandboxVars.FunctionalPockets
+    return options and options.PocketCapacityLossFromHoles == true
+end
+
+-- Read actual visual holes; general condition, dirt and blood are not holes.
+local function currentCapacity(owner, profile)
+    if not damageEnabled() then return profile.capacity, 0 end
+    local visual = owner:getVisual()
+    return FP.capacityAfterHoles(profile, function(region)
+        local part = BloodBodyPartType[region]
+        return visual ~= nil and part ~= nil and visual:getHole(part) > 0
+    end)
+end
+
+local function setCapacity(owner, pocket, capacity)
+    local rounded = math.ceil(capacity)
+    if owner:getCapacity() ~= rounded then owner:setCapacity(rounded) end
+    if pocket:getCapacity() ~= rounded then pocket:setCapacity(rounded) end
+end
+
+-- Update this instance, never the shared item script. A failed world drop is
+-- restored and retried later, rather than deliberately deleting an item.
+local function updatePocket(owner, square)
+    local profile = converted[owner:getFullType()]
+    if not profile or not instanceof(owner, "InventoryContainer") then return end
+    local pocket = owner:getInventory()
+    local capacity, damaged = currentCapacity(owner, profile)
+    setCapacity(owner, pocket, capacity)
+    if damaged == 0 or not square then return end
+    local items = pocket:getItems()
+    while items:size() > 0 and (capacity == 0 or pocket:getCapacityWeight() > capacity + 0.0001) do
+        local item = items:get(ZombRand(items:size()))
+        pocket:Remove(item)
+        if items:contains(item) then break end
+        if not square:AddWorldInventoryItem(item, 0.5, 0.5, 0) then
+            pocket:AddItem(item)
+            break
+        end
+    end
+end
+
+-- Damage is normally acquired while worn. Scan carried garments (also inside
+-- bags) periodically so pre-existing holes and repaired garments are handled.
+local function updateInventory(inventory, square)
+    local items = inventory:getItems()
+    for i = 0, items:size() - 1 do
+        local item = items:get(i)
+        if instanceof(item, "InventoryContainer") then
+            if converted[item:getFullType()] then
+                updatePocket(item, square)
+            else
+                updateInventory(item:getInventory(), square)
+            end
+        end
+    end
+end
+
+local playerTicks = {}
+local function updatePlayerPockets(player)
+    if isClient() or isServer() or next(converted) == nil then return end
+    local num = player:getPlayerNum()
+    local ticks = (playerTicks[num] or 29) + 1
+    playerTicks[num] = ticks % 30
+    if ticks < 30 then return end
+    updateInventory(player:getInventory(), player:getCurrentSquare())
+end
+
+Events.OnPlayerUpdate.Add(updatePlayerPockets)
+
 -- Called by the native container's admission check, not a UI-only restriction.
 function FP.acceptItem(container, item)
     local owner = container:getContainingItem()
     local profile = owner and converted[owner:getFullType()]
     if not profile or not item or item == owner then return false end
     if instanceof(item, "InventoryContainer") or FP.isBulky(item:getType()) then return false end
+    local capacity = currentCapacity(owner, profile)
+    setCapacity(owner, container, capacity)
     local weight = item:getActualWeight()
-    return weight <= profile.maxItemSize
-        and container:getCapacityWeight() + weight <= profile.capacity + 0.0001
+    return capacity > 0 and weight <= profile.maxItemSize
+        and container:getCapacityWeight() + weight <= capacity + 0.0001
 end
 
 local function install()
@@ -60,12 +132,14 @@ local function distributeZombieLoot(roomType, containerType, inventory)
     if isClient() or isServer() or next(converted) == nil then return end
     local options = SandboxVars and SandboxVars.FunctionalPockets
     local mode = options and options.ZombiePocketLoot
-    if mode ~= 2 and mode ~= 3 and mode ~= 4 then return end
     if not instanceof(inventory, "ItemContainer") then return end
     local body = inventory:getParent()
     if not instanceof(body, "IsoDeadBody") or not body:isZombie()
         or body:isPlayer() or body:getContainer() ~= inventory then return end
 
+    -- Apply holes before redistributing loot, even when vanilla loot mode is selected.
+    updateInventory(inventory, body:getSquare())
+    if mode ~= 2 and mode ~= 3 and mode ~= 4 then return end
     local pockets, loose = {}, {}
     local items = inventory:getItems()
     for i = 0, items:size() - 1 do

@@ -19,3 +19,11 @@ option FunctionalPockets.ZombiePocketLoot
     translation = FunctionalPockets_ZombiePocketLoot,
     valueTranslation = FunctionalPockets_ZombiePocketLoot,
 }
+
+option FunctionalPockets.PocketCapacityLossFromHoles
+{
+    type = boolean,
+    default = false,
+    page = FunctionalPockets,
+    translation = FunctionalPockets_PocketCapacityLossFromHoles,
+}
