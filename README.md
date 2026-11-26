@@ -25,6 +25,46 @@ FunctionalPockets.Rules.tags["utilitypockets"] = true
 
 The override fields are total capacity, weight reduction percentage, maximum item size, optional presumed pocket count, and optional list of BloodBodyPartType region names (for example, {2, 30, 0.7, 4, {"Torso_Lower", "Groin", "UpperLeg_L", "UpperLeg_R"}}). Tag keys are normalized local IDs; these are conventions for cooperating mods, not claims that vanilla defines pocket tags. A negative tag wins over a positive tag. The first matching modifier wins, with special profiles for hunting and tactical vests. Generic ambiguous torso-extra locations do not automatically receive pockets. The experimental adapter skips non-clothing item types (including existing native containers); native storage provided by custom mechanisms has not been audited.
 
+
+## Public Lua API (version 1)
+
+In a compatibility mod, declare `require=FunctionalPockets` in mod.info and put registration code in `media/lua/shared`. Run registrations at file load, before Functional Pockets' OnGameBoot conversion; do not register in OnGameStart or after conversion. Restart the game after changing registrations. The current native conversion remains experimental and single-player only.
+
+```lua
+require "FunctionalPockets/Rules"
+local API = FunctionalPockets.API
+
+API.registerProfile("Example.Utility", {
+    capacity = 4,
+    reduction = 40,
+    maxItemSize = 0.8,
+    pocketCount = 6,
+    pocketRegions = {"Torso_Lower", "UpperLeg_L", "UpperLeg_R"},
+})
+API.registerItem("Example.UtilityJacket", "Example.Utility")
+API.overrideStats("Example.OtherJacket", 3, 35)
+API.excludeItem("Example.DecorativeJacket")
+API.registerInclusionKeyword("utilitysmock", "Example.Utility")
+API.registerExclusionKeyword("sealedseams")
+API.registerBodyLocation("example:utilityslot", "Example.Utility")
+API.registerBulkyKeyword("longtool")
+```
+
+| Function | Behavior |
+| --- | --- |
+| registerProfile(name, profile) | Creates or replaces a named profile. Use mod-prefixed names to avoid collisions. |
+| registerItem(fullID, profileOrName) | Explicitly registers a garment using a named profile or an inline profile table with the same five fields. Copies the profile at registration. |
+| overrideStats(fullID, capacity, reduction) | Replaces either or both final stats for an otherwise eligible item; pass nil to leave one unchanged. Does not bypass exclusions. |
+| excludeItem(fullID) | Explicitly excludes a garment. |
+| registerInclusionKeyword(keyword, profileName) | Adds a normalized substring rule ahead of existing inclusion rules. Most recently registered matching inclusion wins. |
+| registerExclusionKeyword(keyword) | Adds a normalized exclusion substring. |
+| registerBodyLocation(location, profileName) | Maps an existing engine body location to a fallback profile. Does not create engine body locations. |
+| registerBulkyKeyword(keyword) | Rejects matching stored item names globally. |
+
+Capacity and maximum item size must be positive finite numbers, reduction is 0–100, pocket count is a positive integer, and pocket regions are an array of engine BloodBodyPartType names (empty is allowed if no regions should cause damage). The API validates basic input types and ranges, not the existence of engine item IDs or region names. Capacity is combined per garment; maxItemSize uses the current weight-based approximation. Native capacity rounds up. Pocket count and regions control the optional damage mechanic, not the number of containers.
+
+Explicit item registrations override tags and classification exclusions but cannot bypass the clothing/native-storage guard. The latest explicit registration or exclusion for the same ID wins and clears earlier stat overrides; call overrideStats afterward if needed. Tags retain their original precedence over keyword rules. Keyword and body-location matching uses the classifier's existing normalization, including local (unqualified) body-location names; collisions across namespaces are possible. Named profile rules still participate in the existing garment name modifiers. Registration errors raise Lua errors. No arbitrary new engine pocket properties or multiple containers are introduced. The legacy Rules tables remain available, but the API is preferred.
+
 ## Native storage research and experiment
 
 Build 42 exposes distinct Java Clothing and InventoryContainer classes, each with its own serialization and class-specific methods. Item scripts have a single ItemType; container capacity is integer-valued. The experiment uses the native container item type, garment body location, native capacity/weight reduction and acceptance callback. Native capacity is rounded upward; the callback attempts to enforce the fractional profile limit and reject bulky/nested items. This is an unverified approximation, not geometric size detection. Pocket retrieval speed is configurable under Functional Pockets in Sandbox Options (1–1000%, default 100%). Only transfers out of converted pocket containers are affected; other transfers retain their normal speed.

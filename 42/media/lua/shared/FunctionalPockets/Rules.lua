@@ -150,3 +150,105 @@ function FP.isBulky(name)
     end
     return false
 end
+
+-- Public startup registration API. Existing Rules tables remain compatible.
+FP.API = FP.API or {}
+local API = FP.API
+API.version = 1
+local stats = {}
+
+local function nonempty(value)
+    assert(type(value) == "string" and normalize(value) ~= "", "Expected a nonempty name")
+    return value
+end
+
+local function itemID(id)
+    assert(type(id) == "string" and id:match("^[^%.]+%.[^%.]+$"), "Expected Module.Item full ID")
+    return id
+end
+
+local function numberIn(value, minimum, maximum)
+    assert(type(value) == "number" and value >= minimum and value <= maximum
+        and value < math.huge, "Invalid pocket number")
+    return value
+end
+
+local function profileData(profile)
+    assert(type(profile) == "table", "Expected a pocket profile")
+    local capacity = numberIn(profile.capacity, 0.000001, math.huge)
+    local reduction = numberIn(profile.reduction, 0, 100)
+    local size = numberIn(profile.maxItemSize, 0.000001, math.huge)
+    local count = numberIn(profile.pocketCount, 1, math.huge)
+    assert(count == math.floor(count), "Expected an integer pocket count")
+    assert(type(profile.pocketRegions) == "table", "Expected pocket regions")
+    local regions = {}
+    for i, region in ipairs(profile.pocketRegions) do
+        regions[i] = nonempty(region)
+    end
+    return {capacity, reduction, size, count, regions}
+end
+
+local function namedProfile(name)
+    assert(type(name) == "string" and R.profiles[name], "Unknown pocket profile")
+    return R.profiles[name]
+end
+
+function API.registerProfile(name, profile)
+    nonempty(name)
+    R.profiles[name] = profileData(profile)
+end
+
+function API.registerItem(id, profile)
+    itemID(id)
+    local data = type(profile) == "string" and namedProfile(profile) or profileData(profile)
+    local regions = {}
+    for i, region in ipairs(data[5]) do regions[i] = region end
+    R.overrides[id] = {data[1], data[2], data[3], data[4], regions}
+    stats[id] = nil
+end
+
+function API.excludeItem(id)
+    R.overrides[itemID(id)] = false
+    stats[id] = nil
+end
+
+-- Override stats of an otherwise eligible item without forcing eligibility.
+function API.overrideStats(id, capacity, reduction)
+    itemID(id)
+    assert(capacity ~= nil or reduction ~= nil, "Expected at least one override")
+    if capacity ~= nil then numberIn(capacity, 0.000001, math.huge) end
+    if reduction ~= nil then numberIn(reduction, 0, 100) end
+    stats[id] = {capacity = capacity, reduction = reduction}
+end
+
+function API.registerInclusionKeyword(keyword, profile)
+    nonempty(keyword)
+    namedProfile(profile)
+    table.insert(R.inclusions, 1, {normalize(keyword), profile})
+end
+
+function API.registerExclusionKeyword(keyword)
+    R.exclusions[#R.exclusions + 1] = normalize(nonempty(keyword))
+end
+
+-- Maps an existing game/mod body location; does not create an engine slot.
+function API.registerBodyLocation(location, profile)
+    nonempty(location)
+    namedProfile(profile)
+    R.locations[localName(location)] = profile
+end
+
+function API.registerBulkyKeyword(keyword)
+    R.bulky[#R.bulky + 1] = normalize(nonempty(keyword))
+end
+
+local classify = FP.classify
+function FP.classify(id, name, location, tags, isClothing, hasStorage)
+    local profile = classify(id, name, location, tags, isClothing, hasStorage)
+    local override = stats[id]
+    if profile and override then
+        profile.capacity = override.capacity or profile.capacity
+        profile.reduction = override.reduction or profile.reduction
+    end
+    return profile
+end
