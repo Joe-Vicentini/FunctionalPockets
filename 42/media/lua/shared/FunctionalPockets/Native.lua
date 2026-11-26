@@ -163,9 +163,10 @@ function FP.acceptItem(container, item)
     if FP.isBulky(item:getType()) then return false end
     local weight = item:getActualWeight()
     if instanceof(item, "InventoryContainer") then
-        -- Vanilla wallets are small pocket-sized containers, not bags.
+        -- Vanilla wallets and key rings are small pocket-sized containers, not bags.
         local id = item:getFullType()
-        if id ~= "Base.Wallet" and id ~= "Base.Wallet_Male" and id ~= "Base.Wallet_Female" then return false end
+        local keyRing = id == "Base.KeyRing" or string.sub(id, 1, 13) == "Base.KeyRing_"
+        if not keyRing and id ~= "Base.Wallet" and id ~= "Base.Wallet_Male" and id ~= "Base.Wallet_Female" then return false end
         local contents = item:getInventory()
         if not contents then return false end
         local items = contents:getItems()
