@@ -160,10 +160,23 @@ function FP.acceptItem(container, item)
     local owner = container:getContainingItem()
     local profile = owner and converted[owner:getFullType()]
     if not profile or not item or item == owner then return false end
-    if instanceof(item, "InventoryContainer") or FP.isBulky(item:getType()) then return false end
+    if FP.isBulky(item:getType()) then return false end
+    local weight = item:getActualWeight()
+    if instanceof(item, "InventoryContainer") then
+        -- Vanilla wallets are small pocket-sized containers, not bags.
+        local id = item:getFullType()
+        if id ~= "Base.Wallet" and id ~= "Base.Wallet_Male" and id ~= "Base.Wallet_Female" then return false end
+        local contents = item:getInventory()
+        if not contents then return false end
+        local items = contents:getItems()
+        for i = 0, items:size() - 1 do
+            local inside = items:get(i)
+            if instanceof(inside, "InventoryContainer") or FP.isBulky(inside:getType()) then return false end
+        end
+        weight = weight + contents:getCapacityWeight()
+    end
     local capacity = currentCapacity(owner, profile)
     setCapacity(owner, container, capacity)
-    local weight = item:getActualWeight()
     return capacity > 0 and weight <= profile.maxItemSize
         and container:getCapacityWeight() + weight <= capacity + 0.0001
 end
