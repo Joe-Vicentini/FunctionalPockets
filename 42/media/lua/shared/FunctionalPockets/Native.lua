@@ -261,15 +261,19 @@ local function distributeZombieLoot(roomType, containerType, inventory)
     -- Snapshot before moving items; try every pocket before overflow.
     for _, item in ipairs(loose) do
         local moved = false
+        local acceptedByRules = false
         for _, pocket in ipairs(pockets) do
-            if FP.acceptItem(pocket, item) and pocket:isItemAllowed(item) then
-                inventory:Remove(item)
-                pocket:AddItem(item)
-                if pocket:getItems():contains(item) then
-                    moved = true
-                    break
+            if FP.acceptItem(pocket, item) then
+                acceptedByRules = true
+                if pocket:isItemAllowed(item) then
+                    inventory:Remove(item)
+                    pocket:AddItem(item)
+                    if pocket:getItems():contains(item) then
+                        moved = true
+                        break
+                    end
+                    inventory:AddItem(item)
                 end
-                inventory:AddItem(item)
             end
         end
         if not moved then
@@ -282,8 +286,18 @@ local function distributeZombieLoot(roomType, containerType, inventory)
                     end
                 end
             elseif mode == 4 then
-                inventory:Remove(item)
+                -- A missing pocket or a failed native transfer is not confirmed overflow.
+                if #pockets > 0 and not acceptedByRules then
+                    inventory:Remove(item)
+                    print("[FunctionalPockets] zombie overflow deleted: " .. item:getFullType()
+                        .. " weight=" .. tostring(item:getActualWeight()))
+                else
+                    print("[FunctionalPockets] zombie loot retained: " .. item:getFullType()
+                        .. (#pockets == 0 and " (no detected pockets)" or " (native admission/transfer failed)"))
+                end
             end
+        elseif mode == 4 then
+            print("[FunctionalPockets] zombie loot stored: " .. item:getFullType())
         end
     end
 end
