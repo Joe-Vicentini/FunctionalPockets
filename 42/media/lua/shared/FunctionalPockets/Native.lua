@@ -6,6 +6,11 @@ local FP = FunctionalPockets
 local experimental = true
 local converted = {}
 
+function FP.isPocketContainer(container)
+    local owner = container and container:getContainingItem()
+    return owner ~= nil and converted[owner:getFullType()] ~= nil
+end
+
 function FP.classifyScript(script)
     if not script:isItemType(ItemType.CLOTHING) then return nil end
     local location = script:getBodyLocation()

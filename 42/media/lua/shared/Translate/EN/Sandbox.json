@@ -1,0 +1,5 @@
+{
+    "Sandbox_FunctionalPockets": "Functional Pockets",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Pocket Retrieval Speed (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Retrieval speed relative to the normal transfer speed. 100% is unchanged; 200% is twice as fast; 50% is half as fast. Only applies when taking items out of pockets."
+}

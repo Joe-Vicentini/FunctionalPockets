@@ -9,6 +9,7 @@ Build 42 development prototype: one combined pocket container per eligible garme
 - `42/mod.info`: Build 42.13+ mod metadata (minimum is an API target, not a tested version).
 - `42/media/lua/shared/FunctionalPockets/Rules.lua`: centralized classification, profiles, overrides, tags, capacity modifiers and bulky-item policy.
 - `42/media/lua/shared/FunctionalPockets/Native.lua`: script adapter and enabled experimental native container conversion.
+- `42/media/lua/client/FunctionalPockets/Retrieval.lua`: single-player pocket retrieval speed adjustment.
 - `tests/classifier.lua`: standalone classification regression tests; run `lua tests/classifier.lua` from the repository root.
 
 ## Compatibility rules
@@ -26,7 +27,7 @@ The override fields are total capacity, weight reduction percentage, and maximum
 
 ## Native storage research and experiment
 
-Build 42 exposes distinct Java Clothing and InventoryContainer classes, each with its own serialization and class-specific methods. Item scripts have a single ItemType; container capacity is integer-valued. The experiment uses the native container item type, garment body location, native capacity/weight reduction and acceptance callback. Native capacity is rounded upward; the callback attempts to enforce the fractional profile limit and reject bulky/nested items. This is an unverified approximation, not geometric size detection. Inventory transfer time is unchanged.
+Build 42 exposes distinct Java Clothing and InventoryContainer classes, each with its own serialization and class-specific methods. Item scripts have a single ItemType; container capacity is integer-valued. The experiment uses the native container item type, garment body location, native capacity/weight reduction and acceptance callback. Native capacity is rounded upward; the callback attempts to enforce the fractional profile limit and reject bulky/nested items. This is an unverified approximation, not geometric size detection. Pocket retrieval speed is configurable under Functional Pockets in Sandbox Options (1–1000%, default 100%). Only transfers out of converted pocket containers are affected; other transfers retain their normal speed.
 
 To investigate, enable the mod and launch a disposable **new single-player** world only. The local `experimental` flag in Native.lua is now true by default. The boot-time conversion and admission callbacks must be verified against the target game version before treating this as functional. Do not toggle it within a save; restart the game between experiments. If the boot hook is too early for the active mod scripts, conversion may not occur.
 

@@ -1,0 +1,11 @@
+VERSION = 1,
+
+option FunctionalPockets.RetrievalSpeed
+{
+    type = integer,
+    min = 1,
+    max = 1000,
+    default = 100,
+    page = FunctionalPockets,
+    translation = FunctionalPockets_RetrievalSpeed,
+}
