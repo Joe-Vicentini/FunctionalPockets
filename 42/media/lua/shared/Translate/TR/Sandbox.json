@@ -12,6 +12,8 @@
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Ceplere atanmış bölgelerdeki delikler, her farklı hasarlı bölge için giysinin özgün kapasitesinden bir cebin payını düşürür (ör. dört cep için 1/4, kargo pantolon için 1/6 veya 1/8). Kalan kapasite yukarı yuvarlanır. İçerik sığana kadar rastgele eşyalar yere düşer. Diğer bölgelerdeki delikler sayılmaz. Delikleri onarmak kapasiteyi geri kazandırır. Vücut bölgeleri yaklaşık olarak belirlenir; birden fazla cep aynı bölgeyi paylaşabilir.",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Ek cep dikilmesine izin ver",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Zaten cepleri olan bir giysiye makas, iğne, bir kullanımlık iplik ve bir kumaş şeridi ile bir ek cep dikilmesine izin verir. Her cep, özgün ortalama cep kapasitesini ekler; yerleşik depolama için yukarı yuvarlanır. Yeni cepler, giysinin kapladığı kullanılmamış ve hasarsız rastgele bir vücut bölgesine yerleştirilir. Tahmini toplam cep sayısı giysinin kapladığı vücut bölgesi sayısını aşamaz; sınırı zaten aşan giysiler değişmez.",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring": "Ek cepler için asgari terzilik seviyesi",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring_tooltip": "Ek cep dikmek için gereken asgari terzilik becerisi seviyesi. 0 tüm seviyelere izin verir.",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Ek cep dikme hızı (%)",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Oyuncunun terzilik becerisi düzeyindeki temel oyun dikiş hızına göre hız. 100% normal hız, 200% iki kat hız, 50% yarı hızdır."
 }

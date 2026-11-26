@@ -12,6 +12,8 @@
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Määratud taskupiirkondades olevad augud vähendavad rõiva algset mahtu iga erineva kahjustatud piirkonna kohta ühe tasku osakaalu võrra (nt nelja tasku korral 1/4, kaubataskutega pükstel 1/6 või 1/8). Allesjäänud maht ümardatakse üles. Juhuslikud esemed kukuvad maha, kuni sisu mahub ära. Mujal olevad augud ei loe. Aukude parandamine taastab mahu. Kehapiirkonnad on ligikaudsed; mitu taskut võivad jagada üht piirkonda.",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Luba lisataskute õmblemist",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Lubab õmmelda ühe lisatasku rõivale, millel juba on taskud, kasutades kääre, nõela, üht niidikasutust ja üht riideriba. Iga tasku lisab algse keskmise taskumahu, sisseehitatud hoiuruumi puhul üles ümardatuna. Uued taskud asuvad juhuslikus vabas, kahjustamata kaetud kehapiirkonnas. Taskute eeldatav koguarv ei tohi ületada rõiva kaetud kehapiirkondade arvu; juba piiri ületavad rõivad jäävad muutmata.",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring": "Lisataskute õmblemise minimaalne oskustase",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring_tooltip": "Lisataskute õmblemiseks vajalik minimaalne õmblemisoskuse tase. 0 lubab kõiki oskustasemeid.",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Lisataskute õmblemise kiirus (%)",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Kiirus võrreldes põhimängu õmblemisega mängija rätsepaoskuse tasemel. 100% on tavakiirus, 200% kaks korda kiirem, 50% pool kiirusest."
 }

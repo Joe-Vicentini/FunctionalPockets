@@ -46,8 +46,15 @@ local function carried(inventory, garment)
     return false
 end
 
+local function hasRequiredTailoring(player)
+    local options = SandboxVars and SandboxVars.FunctionalPockets
+    local minimum = options and options.AdditionalPocketMinimumTailoring or 0
+    return player:getPerkLevel(Perks.Tailoring) >= minimum
+end
+
 function Action:isValid()
-    return carried(self.character:getInventory(), self.garment)
+    return hasRequiredTailoring(self.character)
+        and carried(self.character:getInventory(), self.garment)
         and FP.additionalPocketOptions(self.garment) ~= nil
         and supplies(self.character, self.garment) ~= nil
 end
@@ -103,7 +110,7 @@ end
 local function fillMenu(playerNum, context, items)
     if isClient() or isServer() then return end
     local player = getSpecificPlayer(playerNum)
-    if not player or #items ~= 1 then return end
+    if not player or #items ~= 1 or not hasRequiredTailoring(player) then return end
     local entry = items[1]
     local garment = entry
     if type(entry) == "table" then

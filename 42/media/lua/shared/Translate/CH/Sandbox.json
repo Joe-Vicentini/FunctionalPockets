@@ -12,6 +12,8 @@
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "指定口袋區域的破洞，每個不同的受損區域會扣除衣物原始容量中一個口袋所佔的份額（例如四個口袋為 1/4，工裝褲為 1/6 或 1/8）。剩餘容量無條件進位。隨機物品掉落地面，直到內容物能放入。其他區域的破洞不計。修補破洞可恢復容量。身體區域為近似劃分；多個口袋可能共用同一區域。",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets": "允許縫製額外口袋",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "允許使用剪刀、針、一次線材用量及一條布料，在已有口袋的衣物上縫製一個額外口袋。每個口袋增加原始平均單袋容量，內建儲存容量無條件進位。新口袋隨機占用衣物覆蓋的未使用且未受損身體區域。推定口袋總數不得超過衣物覆蓋的身體區域數；原本超過上限的衣物不變。",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring": "縫製額外口袋的最低裁縫等級",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring_tooltip": "縫製額外口袋所需的最低裁縫技能等級。0 表示不限技能等級。",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "額外口袋縫製速度 (%)",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "相對於玩家當前裁縫等級的原版縫製速度。100% 為正常速度，200% 為兩倍速度，50% 為一半速度。"
 }

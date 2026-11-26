@@ -48,7 +48,7 @@ function FP.additionalPocketOptions(owner)
         end
     end
     if #available == 0 then return nil end
-    return available, profile.pocketCount, maximum
+    return available, profile.pocketCount - base.pocketCount, maximum - base.pocketCount
 end
 
 local function damageEnabled()

@@ -12,6 +12,8 @@
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Huller i de angivne lommeområder fjerner én lommes andel af tøjets oprindelige kapacitet pr. særskilt beskadiget område (f.eks. 1/4 ved fire lommer, 1/6 eller 1/8 ved cargobukser). Den resterende kapacitet rundes op. Tilfældige genstande falder på jorden, indtil indholdet kan være der. Huller andre steder tæller ikke. Reparation af huller gendanner kapaciteten. Kropsområder er omtrentlige; flere lommer kan dele et område.",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Tillad påsyning af ekstra lommer",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Gør det muligt at sy én ekstra lomme på tøj, der allerede har lommer, med saks, nål, én brug af tråd og én stofstrimmel. Hver lomme tilføjer den oprindelige gennemsnitskapacitet pr. lomme, rundet op for indbygget opbevaring. Nye lommer bruger et tilfældigt ledigt, ubeskadiget kropsområde, som tøjet dækker. Det samlede anslåede antal lommer må ikke overstige antallet af dækkede kropsområder; eksisterende tøj over grænsen ændres ikke.",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring": "Minimumsniveau i syning for ekstra lommer",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring_tooltip": "Det mindste færdighedsniveau i syning, der kræves for at sy ekstra lommer. 0 tillader alle niveauer.",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Syhastighed for ekstra lommer (%)",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Hastighed i forhold til grundspillets syning på spillerens skrædderniveau. 100% er normal hastighed, 200% dobbelt hastighed, 50% halv hastighed."
 }

@@ -36,6 +36,16 @@ option FunctionalPockets.AllowAdditionalPockets
     translation = FunctionalPockets_AllowAdditionalPockets,
 }
 
+option FunctionalPockets.AdditionalPocketMinimumTailoring
+{
+    type = integer,
+    min = 0,
+    max = 10,
+    default = 0,
+    page = FunctionalPockets,
+    translation = FunctionalPockets_AdditionalPocketMinimumTailoring,
+}
+
 option FunctionalPockets.AdditionalPocketSewingSpeed
 {
     type = integer,

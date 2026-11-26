@@ -12,6 +12,8 @@
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Díry v určených oblastech kapes odeberou za každou odlišnou poškozenou oblast podíl jedné kapsy z původní kapacity oděvu (např. 1/4 u čtyř kapes, 1/6 nebo 1/8 u kapsáčů). Zbývající kapacita se zaokrouhlí nahoru. Náhodné předměty padají na zem, dokud se obsah nevejde. Díry jinde se nepočítají. Oprava děr obnoví kapacitu. Oblasti těla jsou přibližné; více kapes může sdílet jednu oblast.",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Povolit přišívání dalších kapes",
     "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Umožní přišít jednu další kapsu na oděv, který již kapsy má, pomocí nůžek, jehly, jednoho použití nitě a jednoho pruhu látky. Každá kapsa přidá původní průměrnou kapacitu na kapsu, pro nativní úložiště zaokrouhlenou nahoru. Nové kapsy obsazují náhodnou volnou, nepoškozenou oblast těla krytou oděvem. Celkový předpokládaný počet kapes nesmí přesáhnout počet oblastí těla krytých oděvem; stávající oděvy nad limitem se nemění.",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring": "Minimální úroveň krejčovství pro další kapsy",
+    "Sandbox_FunctionalPockets_AdditionalPocketMinimumTailoring_tooltip": "Minimální úroveň dovednosti krejčovství potřebná k přišívání dalších kapes. 0 umožňuje všechny úrovně.",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Rychlost přišívání dalších kapes (%)",
     "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Rychlost vzhledem k šití v základní hře na hráčově úrovni krejčovství. 100% je normální rychlost, 200% dvojnásobná, 50% poloviční."
 }
