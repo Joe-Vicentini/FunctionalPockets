@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "İşlevsel cepler",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Cepten eşya çıkarma hızı (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Normal aktarım hızına göre eşya çıkarma hızı. 100% değişiklik yapmaz; 200% iki kat hız; 50% yarı hız demektir. Yalnızca ceplerden eşya çıkarırken uygulanır.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Zombi ceplerindeki ganimet",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Temel oyun zombi cesetlerindeki serbest ganimeti oluşturduğunda, bunları giyilen kıyafetlerin ceplerine yeniden dağıtır. Kuşanılmış eşyalar ve mevcut kapların içerikleri değişmez. Sığmayan eşyalar bu ayara göre saklanır, yere düşürülür veya silinir.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Temel oyun",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Cepler - Fazlalığı sakla",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Cepler - Fazlalığı yere düşür",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Cepler - Fazlalığı sil",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Deliklerden kaynaklanan cep kapasitesi kaybı",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Ceplere atanmış bölgelerdeki delikler, her farklı hasarlı bölge için giysinin özgün kapasitesinden bir cebin payını düşürür (ör. dört cep için 1/4, kargo pantolon için 1/6 veya 1/8). Kalan kapasite yukarı yuvarlanır. İçerik sığana kadar rastgele eşyalar yere düşer. Diğer bölgelerdeki delikler sayılmaz. Delikleri onarmak kapasiteyi geri kazandırır. Vücut bölgeleri yaklaşık olarak belirlenir; birden fazla cep aynı bölgeyi paylaşabilir.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Ek cep dikilmesine izin ver",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Zaten cepleri olan bir giysiye makas, iğne, bir kullanımlık iplik ve bir kumaş şeridi ile bir ek cep dikilmesine izin verir. Her cep, özgün ortalama cep kapasitesini ekler; yerleşik depolama için yukarı yuvarlanır. Yeni cepler, giysinin kapladığı kullanılmamış ve hasarsız rastgele bir vücut bölgesine yerleştirilir. Tahmini toplam cep sayısı giysinin kapladığı vücut bölgesi sayısını aşamaz; sınırı zaten aşan giysiler değişmez.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Ek cep dikme hızı (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Oyuncunun terzilik becerisi düzeyindeki temel oyun dikiş hızına göre hız. 100% normal hız, 200% iki kat hız, 50% yarı hızdır."
+}

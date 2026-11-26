@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "機能するポケット",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "ポケットから取り出す速度 (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "通常のアイテム移動速度に対する取り出し速度。100% は変更なし、200% は2倍、50% は半分の速度。ポケットからアイテムを取り出す場合にのみ適用されます。",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "ゾンビのポケットの戦利品",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "バニラでゾンビの死体の戦利品が生成される際、ばらのアイテムを着用中の衣服のポケットに再配分します。装備中のアイテムと既存コンテナの中身は変わりません。入りきらないアイテムは設定に応じて保持、地面に落下、または削除されます。",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "バニラ",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "ポケット - 余剰アイテムを保持",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "ポケット - 余剰アイテムを落とす",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "ポケット - 余剰アイテムを削除",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "穴によるポケット容量の減少",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "ポケットに割り当てられた部位に穴がある場合、損傷した部位ごとに衣服の元の容量からポケット1つ分を減らします（例：4つのポケットなら1/4、カーゴパンツなら1/6または1/8）。残りの容量は切り上げられます。中身が収まるまでランダムなアイテムが地面に落ちます。他の部位の穴は対象外です。穴を修繕すると容量が回復します。身体部位の区分は概算で、複数のポケットが同じ部位を共有する場合があります。",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "追加ポケットの縫い付けを許可",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "既にポケットがある衣服に、はさみ、針、糸1回分、布切れ1枚を使ってポケットを1つ追加できます。各ポケットは元のポケット1つあたりの平均容量を追加し、ゲーム標準の収納容量は切り上げられます。新しいポケットは衣服で覆われた未使用かつ損傷していない身体部位にランダムで割り当てられます。推定ポケット総数は衣服が覆う身体部位の数を超えられません。既に上限を超えている衣服は変更されません。",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "追加ポケットの縫い付け速度 (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "プレイヤーの裁縫スキルレベルに応じたバニラの縫い付け速度との比率。100% は通常、200% は2倍、50% は半分の速度です。"
+}

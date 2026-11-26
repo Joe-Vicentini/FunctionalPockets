@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Bolsos funcionais",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Velocidade de retirada dos bolsos (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Velocidade de retirada em relação à velocidade normal de transferência. 100% mantém a velocidade; 200% é o dobro; 50% é a metade. Aplica-se apenas ao retirar itens dos bolsos.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Saque nos bolsos dos zumbis",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistribui os itens soltos dos cadáveres de zumbis para os bolsos das roupas que estão vestindo quando o jogo base gera o saque. Os itens equipados e o conteúdo dos recipientes existentes permanecem inalterados. O excedente é mantido, derrubado ou excluído de acordo com esta configuração.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Jogo base",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Bolsos - Manter excedente",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Bolsos - Derrubar excedente",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Bolsos - Excluir excedente",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Perda de capacidade dos bolsos devido a furos",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Os furos nas regiões atribuídas aos bolsos retiram a parcela de um bolso da capacidade original da peça de roupa por cada região danificada distinta (por exemplo, 1/4 para quatro bolsos, 1/6 ou 1/8 para calças cargo). A capacidade restante é arredondada para cima. Itens aleatórios caem no chão até que o conteúdo caiba. Furos em outras regiões não contam. Reparar os furos restaura a capacidade. As regiões do corpo são aproximadas; vários bolsos podem compartilhar uma região.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Permitir costurar bolsos adicionais",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Permite costurar um bolso adicional em uma peça de roupa que já tenha bolsos, usando uma tesoura, uma agulha, um uso de linha e uma tira de tecido. Cada bolso acrescenta a capacidade média original por bolso, arredondada para cima para o armazenamento nativo. Os novos bolsos ocupam uma região do corpo coberta, livre e sem danos, escolhida aleatoriamente. O número total estimado de bolsos não pode exceder o número de regiões do corpo cobertas pela peça; roupas que já ultrapassam esse limite permanecem inalteradas.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Velocidade de costura de bolsos adicionais (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Velocidade em relação à costura do jogo base no nível de habilidade de alfaiataria do jogador. 100% é a velocidade normal, 200% é o dobro e 50% é a metade."
+}

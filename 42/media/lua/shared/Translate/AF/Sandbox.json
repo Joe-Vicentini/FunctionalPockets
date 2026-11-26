@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Funksionele sakke",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Uithaalspoed uit sakke (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Spoed relatief tot normale oordragspoed. 100% bly onveranderd; 200% is twee keer so vinnig; 50% is half so vinnig. Geld slegs wanneer items uit sakke gehaal word.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Buit in zombies se sakke",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Versprei los buit van zombielyke na gedrade sakke wanneer die basisspel dit genereer. Toegeruste items en bestaande houerinhoud bly onveranderd. Oorskot word behou, laat val of uitgevee volgens hierdie instelling.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Basisspel",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Sakke - Behou oorskot",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Sakke - Laat oorskot val",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Sakke - Vee oorskot uit",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Verlies aan sakkapasiteit weens gate",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Gate in aangewese sakstreke verminder die oorspronklike kapasiteit van die kledingstuk met een sak se aandeel per afsonderlike beskadigde streek (bv. 1/4 vir vier sakke, 1/6 of 1/8 vir vragbroeke). Oorblywende kapasiteit word opwaarts afgerond. Ewekansige items val op die grond totdat die inhoud pas. Gate elders tel nie. Herstel van gate herstel kapasiteit. Liggaamstreke is benaderd; verskeie sakke kan een streek deel.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Laat bykomende sakke toe",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Laat toe dat een ekstra sak aan 'n kledingstuk wat reeds sakke het, vasgewerk word met 'n skêr, naald, een gebruik van garing en een materiaalstrook. Elke sak voeg die oorspronklike gemiddelde kapasiteit per sak by, opwaarts afgerond vir ingeboude berging. Nuwe sakke beslaan 'n ewekansige ongebruikte, onbeskadigde bedekte liggaamstreek. Die beraamde totale aantal sakke mag nie die aantal bedekte liggaamstreke oorskry nie; bestaande kledingstukke bo dié perk bly onveranderd.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Naaispoed vir ekstra sakke (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Spoed relatief tot normale naaiwerk in die basisspel op die speler se kleremakersvlak. 100% is normaal, 200% is twee keer so vinnig, 50% is half so vinnig."
+}

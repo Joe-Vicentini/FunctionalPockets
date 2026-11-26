@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Buzunare funcționale",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Viteza de scoatere din buzunare (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Viteza de scoatere raportată la viteza normală de transfer. 100% nu schimbă viteza; 200% înseamnă viteză dublă; 50% înseamnă jumătate din viteză. Se aplică doar la scoaterea obiectelor din buzunare.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Pradă în buzunarele zombilor",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistribuie obiectele libere de pe cadavrele zombilor în buzunarele hainelor purtate, atunci când jocul de bază generează prada. Obiectele echipate și conținutul recipientelor existente rămân neschimbate. Surplusul este păstrat, aruncat pe jos sau șters conform acestei setări.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Joc de bază",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Buzunare - Păstrează surplusul",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Buzunare - Aruncă surplusul",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Buzunare - Șterge surplusul",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pierderea capacității buzunarelor din cauza găurilor",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Găurile din zonele atribuite buzunarelor scad partea aferentă unui buzunar din capacitatea inițială a hainei pentru fiecare zonă deteriorată distinctă (de exemplu 1/4 pentru patru buzunare, 1/6 sau 1/8 pentru pantaloni cargo). Capacitatea rămasă este rotunjită în sus. Obiecte aleatorii cad pe pământ până când conținutul încape. Găurile din alte zone nu sunt luate în calcul. Repararea găurilor restabilește capacitatea. Zonele corpului sunt aproximative; mai multe buzunare pot împărți o zonă.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Permite coaserea buzunarelor suplimentare",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Permite coaserea unui buzunar suplimentar pe o haină care are deja buzunare, folosind o foarfecă, un ac, o utilizare de ață și o fâșie de material textil. Fiecare buzunar adaugă capacitatea medie inițială per buzunar, rotunjită în sus pentru depozitarea nativă. Buzunarele noi ocupă o zonă aleatorie a corpului acoperită de haină, neutilizată și nedeteriorată. Numărul total estimat de buzunare nu poate depăși numărul de zone ale corpului acoperite de haină; hainele care depășesc deja limita rămân neschimbate.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Viteza de coasere a buzunarelor suplimentare (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Viteza raportată la coaserea din jocul de bază la nivelul de croitorie al jucătorului. 100% este viteza normală, 200% este dublă, 50% este jumătate."
+}

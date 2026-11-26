@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Bolsillos funcionales",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Velocidad de extracción de los bolsillos (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Velocidad de extracción respecto a la velocidad normal de transferencia. 100% no la modifica; 200% es el doble de rápido; 50% es la mitad. Solo se aplica al sacar objetos de los bolsillos.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Botín de los bolsillos de zombis",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistribuye el botín suelto de los cadáveres de zombis en los bolsillos de la ropa que llevan cuando el juego base lo genera. Los objetos equipados y el contenido de los contenedores existentes no cambian. El excedente se conserva, se deja caer o se elimina según este ajuste.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Juego base",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Bolsillos - Conservar excedente",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Bolsillos - Dejar caer excedente",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Bolsillos - Eliminar excedente",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pérdida de capacidad de los bolsillos por agujeros",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Los agujeros en las zonas asignadas a bolsillos restan la parte correspondiente a un bolsillo de la capacidad original de la prenda por cada zona dañada distinta (p. ej., 1/4 para cuatro bolsillos, 1/6 o 1/8 para pantalones cargo). La capacidad restante se redondea hacia arriba. Caen objetos aleatorios al suelo hasta que el contenido cabe. Los agujeros en otras zonas no cuentan. Reparar los agujeros restaura la capacidad. Las zonas corporales son aproximadas; varios bolsillos pueden compartir una zona.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Permitir coser bolsillos adicionales",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Permite coser un bolsillo adicional a una prenda que ya tiene bolsillos usando tijeras, una aguja, un uso de hilo y una tira de tela. Cada bolsillo añade la capacidad media original por bolsillo, redondeada hacia arriba para el almacenamiento nativo. Los nuevos bolsillos ocupan una zona corporal cubierta, libre y sin daños, elegida al azar. El número total estimado de bolsillos no puede superar el número de zonas corporales cubiertas por la prenda; las prendas que ya superen ese límite no cambian.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Velocidad de costura de bolsillos adicionales (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Velocidad respecto a la costura del juego base al nivel de sastrería del jugador. 100% es la velocidad normal, 200% es el doble y 50% es la mitad."
+}

@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "实用口袋",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "口袋取物速度 (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "相对于正常物品转移速度的取物速度。100% 不变；200% 为两倍速度；50% 为一半速度。仅在从口袋取出物品时生效。",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "僵尸口袋战利品",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "原版游戏生成僵尸尸体的散放战利品时，将其重新分配到身上衣物的口袋中。已装备物品和现有容器内容不变。根据此设置保留、掉落或删除放不下的物品。",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "原版",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "口袋 - 保留多余物品",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "口袋 - 掉落多余物品",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "口袋 - 删除多余物品",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "破洞造成的口袋容量损失",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "指定口袋区域的破洞，每个不同的受损区域会扣除衣物原始容量中一个口袋所占的份额（例如四个口袋为 1/4，工装裤为 1/6 或 1/8）。剩余容量向上取整。随机物品掉落地面，直到内容物能够放入。其他区域的破洞不计。修补破洞可恢复容量。身体区域为近似划分；多个口袋可能共用同一区域。",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "允许缝制额外口袋",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "允许使用剪刀、针、一次线材用量和一条布料，在已有口袋的衣物上缝制一个额外口袋。每个口袋增加原始平均单袋容量，内置储存容量向上取整。新口袋随机占用衣物覆盖的未使用且未受损身体区域。推定口袋总数不得超过衣物覆盖的身体区域数；原本超过上限的衣物不变。",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "额外口袋缝制速度 (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "相对于玩家当前裁缝等级的原版缝制速度。100% 为正常速度，200% 为两倍速度，50% 为一半速度。"
+}

@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Butxaques funcionals",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Velocitat d'extracció de les butxaques (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Velocitat d'extracció respecte de la velocitat normal de transferència. 100% no la modifica; 200% és el doble de ràpid; 50% és la meitat. Només s'aplica en treure objectes de les butxaques.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Botí de les butxaques dels zombis",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistribueix el botí solt dels cadàvers de zombis a les butxaques de la roba que porten quan el joc base el genera. Els objectes equipats i el contingut dels contenidors existents no canvien. El sobrant es conserva, es deixa caure o s'elimina segons aquest ajust.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Joc base",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Butxaques - Conservar el sobrant",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Butxaques - Deixar caure el sobrant",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Butxaques - Eliminar el sobrant",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pèrdua de capacitat de les butxaques per forats",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Els forats a les zones assignades a les butxaques resten una part de la capacitat original de la peça equivalent a una butxaca per cada zona danyada diferent (p. ex. 1/4 per a quatre butxaques, 1/6 o 1/8 per a pantalons de càrrega). La capacitat restant s'arrodoneix cap amunt. Cauen objectes aleatoris a terra fins que el contingut hi cap. Els forats en altres zones no compten. Reparar-los restaura la capacitat. Les zones del cos són aproximades; diverses butxaques poden compartir una zona.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Permetre cosir butxaques addicionals",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Permet cosir una butxaca addicional a una peça que ja en té amb tisores, una agulla, un ús de fil i una tira de tela. Cada butxaca afegeix la capacitat mitjana original per butxaca, arrodonida cap amunt per a l'emmagatzematge natiu. Les noves butxaques ocupen una zona del cos coberta, lliure i sense danys, triada a l'atzar. El nombre total estimat de butxaques no pot superar el nombre de zones del cos cobertes per la peça; les peces existents que superen el límit no canvien.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Velocitat de costura de butxaques addicionals (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Velocitat respecte de la costura del joc base al nivell de sastreria del jugador. 100% és normal, 200% és el doble de ràpid i 50% és la meitat."
+}

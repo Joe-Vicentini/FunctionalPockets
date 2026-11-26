@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Mga nagagamit na bulsa",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Bilis ng pagkuha mula sa bulsa (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Bilis ng pagkuha kumpara sa karaniwang bilis ng paglilipat. Walang pagbabago sa 100%; dalawang beses ang bilis sa 200%; kalahati ang bilis sa 50%. Nalalapat lamang kapag kumukuha ng mga bagay mula sa bulsa.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Mga nakukuhang bagay sa bulsa ng zombie",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Muling ipinamamahagi ang mga nakaluwag na bagay sa bangkay ng zombie sa mga bulsa ng suot nitong damit kapag nilikha ang mga ito ng batayang laro. Hindi binabago ang mga bagay na nakasuot o nakahawak at ang laman ng mga umiiral na lalagyan. Ang sobrang bagay ay itinatabi, inihuhulog o binubura ayon sa setting na ito.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Batayang laro",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Mga bulsa - Itabi ang sobra",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Mga bulsa - Ihulog ang sobra",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Mga bulsa - Burahin ang sobra",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pagbawas ng kapasidad ng bulsa dahil sa butas",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Ang mga butas sa mga itinakdang bahagi ng bulsa ay nagbabawas ng katumbas ng isang bulsa mula sa orihinal na kapasidad ng damit sa bawat magkakaibang napinsalang bahagi (hal. 1/4 para sa apat na bulsa, 1/6 o 1/8 para sa cargo pants). Ang natitirang kapasidad ay niroround up sa susunod na buong bilang. May mga random na bagay na mahuhulog sa lupa hanggang magkasya ang laman. Hindi kasama ang mga butas sa ibang bahagi. Ang pagkukumpuni ng mga butas ay nagpapanumbalik ng kapasidad. Tinatayang mga bahagi lamang ng katawan ang ginagamit; maaaring magbahagi ng isang bahagi ang maraming bulsa.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Payagang magtahi ng karagdagang bulsa",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Pinapayagang magtahi ng isang karagdagang bulsa sa damit na mayroon nang mga bulsa gamit ang gunting, karayom, isang gamit ng sinulid at isang piraso ng tela. Idinaragdag ng bawat bulsa ang orihinal na karaniwang kapasidad ng isang bulsa, na niroround up para sa built-in na imbakan. Ang bagong bulsa ay inilalagay sa random na hindi pa nagagamit at walang pinsalang bahagi ng katawan na natatakpan ng damit. Hindi maaaring lumampas ang tinatayang kabuuang bilang ng bulsa sa bilang ng mga bahaging natatakpan ng damit; hindi magbabago ang mga damit na lampas na sa limitasyon.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Bilis ng pagtahi ng karagdagang bulsa (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Bilis kumpara sa pagtahi sa batayang laro sa antas ng kasanayan sa pananahi ng manlalaro. Karaniwan ang 100%, doble ang 200%, at kalahati ang 50%."
+}

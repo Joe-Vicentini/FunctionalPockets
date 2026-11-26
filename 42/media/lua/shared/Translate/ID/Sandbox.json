@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Kantong fungsional",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Kecepatan mengambil dari kantong (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Kecepatan pengambilan dibandingkan dengan kecepatan pemindahan normal. 100% tidak berubah; 200% dua kali lebih cepat; 50% setengah kecepatan. Hanya berlaku saat mengambil barang dari kantong.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Jarahan kantong zombi",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Mendistribusikan ulang barang jarahan lepas dari mayat zombi ke kantong pakaian yang dikenakan saat gim dasar membuatnya. Barang yang dipakai dan isi wadah yang sudah ada tidak berubah. Kelebihan barang disimpan, dijatuhkan, atau dihapus sesuai pengaturan ini.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Gim dasar",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Kantong - Simpan kelebihan",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Kantong - Jatuhkan kelebihan",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Kantong - Hapus kelebihan",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pengurangan kapasitas kantong akibat lubang",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Lubang di area kantong yang ditetapkan mengurangi kapasitas asli pakaian sebesar bagian satu kantong untuk setiap area berbeda yang rusak (mis. 1/4 untuk empat kantong, 1/6 atau 1/8 untuk celana kargo). Kapasitas tersisa dibulatkan ke atas. Barang acak jatuh ke tanah hingga isinya muat. Lubang di area lain tidak dihitung. Memperbaiki lubang memulihkan kapasitas. Area tubuh bersifat perkiraan; beberapa kantong dapat berbagi satu area.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Izinkan menjahit kantong tambahan",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Memungkinkan menjahit satu kantong tambahan pada pakaian yang sudah memiliki kantong menggunakan gunting, jarum, satu kali penggunaan benang, dan satu potong kain. Setiap kantong menambah kapasitas rata-rata asli per kantong, dibulatkan ke atas untuk penyimpanan bawaan. Kantong baru menempati area tubuh tertutup pakaian yang acak, belum digunakan, dan tidak rusak. Jumlah perkiraan kantong tidak boleh melebihi jumlah area tubuh yang ditutupi pakaian; pakaian yang sudah melebihi batas tidak berubah.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Kecepatan menjahit kantong tambahan (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Kecepatan dibandingkan dengan menjahit di gim dasar pada tingkat keterampilan menjahit pemain. 100% kecepatan normal, 200% dua kali lebih cepat, 50% setengah kecepatan."
+}

@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Poches fonctionnelles",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Vitesse de retrait des poches (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Vitesse de retrait par rapport à la vitesse de transfert normale. 100 % ne change rien ; 200 % est deux fois plus rapide ; 50 % est deux fois moins rapide. S'applique uniquement au retrait d'objets des poches.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Butin dans les poches des zombies",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistribue les objets en vrac des cadavres de zombies dans les poches des vêtements portés lorsque le jeu de base génère le butin. Les objets équipés et le contenu des conteneurs existants restent inchangés. Le surplus est conservé, déposé au sol ou supprimé selon ce réglage.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Jeu de base",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Poches - Conserver le surplus",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Poches - Déposer le surplus au sol",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Poches - Supprimer le surplus",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Perte de capacité des poches due aux trous",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Les trous dans les zones associées aux poches retirent la part d'une poche de la capacité d'origine du vêtement pour chaque zone endommagée distincte (p. ex. 1/4 pour quatre poches, 1/6 ou 1/8 pour un pantalon cargo). La capacité restante est arrondie à l'entier supérieur. Des objets choisis au hasard tombent au sol jusqu'à ce que le contenu puisse tenir dans les poches. Les trous ailleurs ne comptent pas. Réparer les trous restaure la capacité. Les zones du corps sont approximatives ; plusieurs poches peuvent partager une zone.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Autoriser la couture de poches supplémentaires",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Permet de coudre une poche supplémentaire sur un vêtement déjà muni de poches, à l'aide de ciseaux, d'une aiguille, d'une utilisation de fil et d'une bande de tissu. Chaque poche ajoute la capacité moyenne d'origine par poche, arrondie à l'entier supérieur pour le stockage natif. Les nouvelles poches occupent une zone du corps couverte, libre et intacte choisie au hasard. Le nombre total estimé de poches ne peut pas dépasser le nombre de zones du corps couvertes par le vêtement ; les vêtements existants dépassant cette limite restent inchangés.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Vitesse de couture des poches supplémentaires (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Vitesse par rapport à la couture du jeu de base au niveau de compétence en couture du joueur. 100 % correspond à la vitesse normale, 200 % au double et 50 % à la moitié."
+}

@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Funktionale Taschen",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Entnahmegeschwindigkeit aus Taschen (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Entnahmegeschwindigkeit im Verhältnis zur normalen Transfergeschwindigkeit. 100% bleibt unverändert; 200% ist doppelt so schnell; 50% halb so schnell. Gilt nur beim Entnehmen von Gegenständen aus Taschen.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Beute in Zombietaschen",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Verteilt lose Beute von Zombieleichen in die Taschen getragener Kleidung, wenn das Grundspiel sie erzeugt. Ausgerüstete Gegenstände und vorhandene Behälterinhalte bleiben unverändert. Überschüssige Gegenstände werden je nach Einstellung behalten, fallen gelassen oder gelöscht.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Grundspiel",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Taschen - Überschuss behalten",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Taschen - Überschuss fallen lassen",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Taschen - Überschuss löschen",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Verlust von Taschenkapazität durch Löcher",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Löcher in zugeordneten Taschenbereichen verringern die ursprüngliche Kapazität des Kleidungsstücks pro unterschiedlichem beschädigtem Bereich um den Anteil einer Tasche (z. B. 1/4 bei vier Taschen, 1/6 oder 1/8 bei Cargohosen). Die verbleibende Kapazität wird aufgerundet. Zufällige Gegenstände fallen zu Boden, bis der Inhalt hineinpasst. Löcher an anderen Stellen zählen nicht. Das Reparieren von Löchern stellt die Kapazität wieder her. Körperbereiche sind Näherungen; mehrere Taschen können sich einen Bereich teilen.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Annähen zusätzlicher Taschen erlauben",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Erlaubt das Annähen einer zusätzlichen Tasche an ein Kleidungsstück, das bereits Taschen hat, mit Schere, Nadel, einer Verwendung Faden und einem Stoffstreifen. Jede Tasche fügt die ursprüngliche durchschnittliche Kapazität pro Tasche hinzu, für den nativen Stauraum aufgerundet. Neue Taschen belegen einen zufälligen freien, unbeschädigten bedeckten Körperbereich. Die geschätzte Gesamtzahl der Taschen darf die Anzahl bedeckter Körperbereiche nicht überschreiten; vorhandene Kleidungsstücke über diesem Limit bleiben unverändert.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Nähgeschwindigkeit für zusätzliche Taschen (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Geschwindigkeit im Verhältnis zum Nähen im Grundspiel auf der Schneiderei-Fertigkeitsstufe des Spielers. 100% ist normal, 200% doppelt so schnell, 50% halb so schnell."
+}

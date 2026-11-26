@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Funktionelle lommer",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Hastighed for udtagning fra lommer (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Udtagningens hastighed i forhold til normal overførselshastighed. 100% er uændret; 200% er dobbelt hastighed; 50% er halv hastighed. Gælder kun, når genstande tages ud af lommer.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Bytte i zombiers lommer",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Fordeler løst bytte fra zombielig i lommer på deres tøj, når grundspillet genererer det. Udstyrede genstande og eksisterende beholderindhold ændres ikke. Overskydende genstande beholdes, tabes eller slettes efter denne indstilling.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Grundspil",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Lommer - Behold overskud",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Lommer - Tab overskud",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Lommer - Slet overskud",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Tab af lommekapacitet på grund af huller",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Huller i de angivne lommeområder fjerner én lommes andel af tøjets oprindelige kapacitet pr. særskilt beskadiget område (f.eks. 1/4 ved fire lommer, 1/6 eller 1/8 ved cargobukser). Den resterende kapacitet rundes op. Tilfældige genstande falder på jorden, indtil indholdet kan være der. Huller andre steder tæller ikke. Reparation af huller gendanner kapaciteten. Kropsområder er omtrentlige; flere lommer kan dele et område.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Tillad påsyning af ekstra lommer",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Gør det muligt at sy én ekstra lomme på tøj, der allerede har lommer, med saks, nål, én brug af tråd og én stofstrimmel. Hver lomme tilføjer den oprindelige gennemsnitskapacitet pr. lomme, rundet op for indbygget opbevaring. Nye lommer bruger et tilfældigt ledigt, ubeskadiget kropsområde, som tøjet dækker. Det samlede anslåede antal lommer må ikke overstige antallet af dækkede kropsområder; eksisterende tøj over grænsen ændres ikke.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Syhastighed for ekstra lommer (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Hastighed i forhold til grundspillets syning på spillerens skrædderniveau. 100% er normal hastighed, 200% dobbelt hastighed, 50% halv hastighed."
+}

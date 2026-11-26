@@ -1,0 +1,17 @@
+{
+    "Sandbox_FunctionalPockets": "Használható zsebek",
+    "Sandbox_FunctionalPockets_RetrievalSpeed": "Zsebből kivétel sebessége (%)",
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "A kivétel sebessége a normál áthelyezési sebességhez képest. 100% változatlan; 200% kétszeres; 50% feleakkora sebesség. Csak a zsebekből való kivételre vonatkozik.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Zombik zsebeiben lévő zsákmány",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Az alapjáték által létrehozott, zombitetemeknél lévő szabad tárgyakat a viselt ruhák zsebeibe osztja szét. A felszerelt tárgyak és a meglévő tárolók tartalma nem változik. A felesleg a beállítás szerint megmarad, a földre kerül vagy törlődik.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Alapjáték",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Zsebek - Felesleg megtartása",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Zsebek - Felesleg ledobása",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Zsebek - Felesleg törlése",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Lyukak miatti zsebkapacitás-vesztés",
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "A zsebekhez rendelt területeken lévő lyukak minden különálló sérült terület után egy zsebnyi részt vonnak le a ruhadarab eredeti kapacitásából (pl. négy zsebnél 1/4, oldalzsebes nadrágnál 1/6 vagy 1/8). A fennmaradó kapacitást felfelé kerekíti. Véletlenszerű tárgyak esnek a földre, amíg a tartalom elfér. A máshol lévő lyukak nem számítanak. A lyukak javítása helyreállítja a kapacitást. A testtájak közelítő jellegűek; több zseb osztozhat egy területen.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "További zsebek felvarrásának engedélyezése",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Lehetővé teszi egy további zseb felvarrását olyan ruhadarabra, amelynek már vannak zsebei, ollóval, tűvel, egy adag cérnával és egy szövetcsíkkal. Minden zseb az eredeti átlagos zsebkapacitást adja hozzá, a beépített tárolásnál felfelé kerekítve. Az új zsebek véletlenszerű, szabad, sértetlen, ruhával fedett testtájra kerülnek. A becsült összes zsebszám nem haladhatja meg a ruhadarab által fedett testtájak számát; a korábban határérték feletti ruhák változatlanok maradnak.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "További zsebek varrási sebessége (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Sebesség az alapjáték varrásához képest a játékos szabás-varrás készségszintjén. 100% normál, 200% kétszeres, 50% feleakkora sebesség."
+}
