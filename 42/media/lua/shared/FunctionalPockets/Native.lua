@@ -73,6 +73,27 @@ local function setCapacity(owner, pocket, capacity)
     if pocket:getCapacity() ~= rounded then pocket:setCapacity(rounded) end
 end
 
+-- Initialize newly created pockets directly, before they enter an inventory.
+-- Log the first instance of each type to diagnose native script initialization.
+local checkedCreation = {}
+function FP.initializePocket(owner)
+    if isClient() or isServer() or not owner then return end
+    local id = owner:getFullType()
+    local profile = converted[id]
+    if not profile or not instanceof(owner, "InventoryContainer") then return end
+    local pocket = owner:getInventory()
+    if not pocket then return end
+    local expected = math.ceil(profile.capacity)
+    local ownerBefore, pocketBefore = owner:getCapacity(), pocket:getCapacity()
+    setCapacity(owner, pocket, expected)
+    if not checkedCreation[id] then
+        checkedCreation[id] = true
+        print("[FunctionalPockets] create " .. id .. " expected=" .. tostring(expected)
+            .. " owner=" .. tostring(ownerBefore) .. "->" .. tostring(owner:getCapacity())
+            .. " container=" .. tostring(pocketBefore) .. "->" .. tostring(pocket:getCapacity()))
+    end
+end
+
 -- Update this instance, never the shared item script. A failed world drop is
 -- restored and retried later, rather than deliberately deleting an item.
 local function updatePocket(owner, square)
@@ -181,6 +202,11 @@ local function install()
             script:DoParam("MaxItemSize", tostring(profile.maxItemSize))
             script:DoParam("AcceptItemFunction", "FunctionalPockets.acceptItem")
             converted[script:getFullName()] = profile
+            -- Preserve existing item creation callbacks from vanilla or other mods.
+            local onCreate = script:getLuaCreate()
+            if not onCreate or onCreate == "" then
+                script:setLuaCreate("FunctionalPockets.initializePocket")
+            end
             hasConverted = true
         end
     end
