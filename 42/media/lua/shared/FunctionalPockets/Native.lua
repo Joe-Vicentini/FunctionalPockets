@@ -242,16 +242,21 @@ local function distributeZombieLoot(roomType, containerType, inventory)
     if mode ~= 2 and mode ~= 3 and mode ~= 4 then return end
     local pockets, loose = {}, {}
     local items = inventory:getItems()
+    local wornItems = body:getWornItems()
     for i = 0, items:size() - 1 do
         local item = items:get(i)
-        if body:isEquippedClothing(item) and instanceof(item, "InventoryContainer")
+        -- Converted garments are native containers; also check actual worn-item membership.
+        local worn = body:isEquippedClothing(item) or (wornItems and wornItems:contains(item))
+        if worn and instanceof(item, "InventoryContainer")
             and FP.isPocketContainer(item:getInventory()) then
             pockets[#pockets + 1] = item:getInventory()
-        elseif not body:isEquipped(item) and not body:isEquippedClothing(item)
+        elseif not body:isEquipped(item) and not worn
             and not body:isAttachedItem(item) and not body:isHandItem(item) then
             loose[#loose + 1] = item
         end
     end
+    print("[FunctionalPockets] zombie loot: pockets=" .. tostring(#pockets)
+        .. " loose=" .. tostring(#loose))
 
     -- Snapshot before moving items; try every pocket before overflow.
     for _, item in ipairs(loose) do
