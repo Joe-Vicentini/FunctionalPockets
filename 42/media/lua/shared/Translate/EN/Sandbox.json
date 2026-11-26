@@ -1,5 +1,11 @@
 {
     "Sandbox_FunctionalPockets": "Functional Pockets",
     "Sandbox_FunctionalPockets_RetrievalSpeed": "Pocket Retrieval Speed (%)",
-    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Retrieval speed relative to the normal transfer speed. 100% is unchanged; 200% is twice as fast; 50% is half as fast. Only applies when taking items out of pockets."
+    "Sandbox_FunctionalPockets_RetrievalSpeed_tooltip": "Retrieval speed relative to the normal transfer speed. 100% is unchanged; 200% is twice as fast; 50% is half as fast. Only applies when taking items out of pockets.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot": "Zombie Pocket Loot",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_tooltip": "Redistributes loose zombie corpse loot into worn pockets when vanilla generates it. Equipped items and existing container contents are unchanged. Overflow is kept, dropped or deleted according to this setting.",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option1": "Vanilla",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option2": "Pockets - Keep Overflow",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Pockets - Drop Overflow",
+    "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Pockets - Delete Overflow"
 }

@@ -9,3 +9,13 @@ option FunctionalPockets.RetrievalSpeed
     page = FunctionalPockets,
     translation = FunctionalPockets_RetrievalSpeed,
 }
+
+option FunctionalPockets.ZombiePocketLoot
+{
+    type = enum,
+    numValues = 4,
+    default = 1,
+    page = FunctionalPockets,
+    translation = FunctionalPockets_ZombiePocketLoot,
+    valueTranslation = FunctionalPockets_ZombiePocketLoot,
+}
