@@ -155,6 +155,23 @@ end
 
 Events.OnPlayerUpdate.Add(updatePlayerPockets)
 
+-- Small vanilla containers that can realistically fit in garment pockets.
+local smallContainers = {
+    ["Base.Wallet"] = true,
+    ["Base.Wallet_Male"] = true,
+    ["Base.Wallet_Female"] = true,
+    ["Base.Wallet_Hide"] = true,
+    ["Base.DiceBag"] = true,
+    ["Base.GemBag"] = true,
+    ["Base.SeedBag"] = true,
+    ["Base.SeedBag_Farming"] = true,
+    ["Base.PencilCase"] = true,
+    ["Base.PencilCase_Gaming"] = true,
+    ["Base.FirstAidKit_Camping"] = true,
+    ["Base.FirstAidKit_Camping_New"] = true,
+    ["Base.FirstAidKit_Military"] = true,
+}
+
 -- Called by the native container's admission check, not a UI-only restriction.
 function FP.acceptItem(container, item)
     local owner = container:getContainingItem()
@@ -163,10 +180,9 @@ function FP.acceptItem(container, item)
     if FP.isBulky(item:getType()) then return false end
     local weight = item:getActualWeight()
     if instanceof(item, "InventoryContainer") then
-        -- Vanilla wallets and key rings are small pocket-sized containers, not bags.
         local id = item:getFullType()
         local keyRing = id == "Base.KeyRing" or string.sub(id, 1, 13) == "Base.KeyRing_"
-        if not keyRing and id ~= "Base.Wallet" and id ~= "Base.Wallet_Male" and id ~= "Base.Wallet_Female" then return false end
+        if not keyRing and not smallContainers[id] then return false end
         local contents = item:getInventory()
         if not contents then return false end
         local items = contents:getItems()
