@@ -5,6 +5,7 @@ local FP = FunctionalPockets
 -- Use only in a disposable NEW single-player world.
 local experimental = true
 local converted = {}
+local hasConverted = false
 
 function FP.isPocketContainer(container)
     local owner = container and container:getContainingItem()
@@ -123,7 +124,7 @@ end
 
 local playerTicks = {}
 local function updatePlayerPockets(player)
-    if isClient() or isServer() or next(converted) == nil then return end
+    if isClient() or isServer() or not hasConverted then return end
     local num = player:getPlayerNum()
     local ticks = (playerTicks[num] or 29) + 1
     playerTicks[num] = ticks % 30
@@ -180,6 +181,7 @@ local function install()
             script:DoParam("MaxItemSize", tostring(profile.maxItemSize))
             script:DoParam("AcceptItemFunction", "FunctionalPockets.acceptItem")
             converted[script:getFullName()] = profile
+            hasConverted = true
         end
     end
 end
@@ -188,7 +190,7 @@ Events.OnGameBoot.Add(install)
 
 -- Vanilla corpse loot is generated lazily; OnZombieDead is too early.
 local function distributeZombieLoot(roomType, containerType, inventory)
-    if isClient() or isServer() or next(converted) == nil then return end
+    if isClient() or isServer() or not hasConverted then return end
     local options = SandboxVars and SandboxVars.FunctionalPockets
     local mode = options and options.ZombiePocketLoot
     if not instanceof(inventory, "ItemContainer") then return end
