@@ -21,6 +21,35 @@ function FP.classifyScript(script)
     return FP.classify(script:getFullName(), script:getName(), tostring(location), tags, true, false)
 end
 
+local function instanceProfile(owner, profile)
+    return FP.profileWithExtraPockets(profile, owner:getModData().FunctionalPocketsExtraRegions)
+end
+
+function FP.additionalPocketOptions(owner)
+    if isClient() or isServer() or not owner then return nil end
+    local options = SandboxVars and SandboxVars.FunctionalPockets
+    if not options or not options.AllowAdditionalPockets then return nil end
+    local base = converted[owner:getFullType()]
+    if not base or not instanceof(owner, "InventoryContainer") then return nil end
+    local profile = instanceProfile(owner, base)
+    local covered = base.coveredRegions or {}
+    local maximum = #covered
+    if profile.pocketCount >= maximum then return nil end
+    local occupied = {}
+    for _, region in ipairs(profile.pocketRegions) do occupied[region] = true end
+    local available = {}
+    local visual = owner:getVisual()
+    if not visual then return nil end
+    for _, region in ipairs(covered) do
+        local part = BloodBodyPartType[region]
+        if not occupied[region] and part and visual:getHole(part) == 0 then
+            available[#available + 1] = region
+        end
+    end
+    if #available == 0 then return nil end
+    return available, profile.pocketCount, maximum
+end
+
 local function damageEnabled()
     local options = SandboxVars and SandboxVars.FunctionalPockets
     return options and options.PocketCapacityLossFromHoles == true
@@ -28,6 +57,7 @@ end
 
 -- Read actual visual holes; general condition, dirt and blood are not holes.
 local function currentCapacity(owner, profile)
+    profile = instanceProfile(owner, profile)
     if not damageEnabled() then return profile.capacity, 0 end
     local visual = owner:getVisual()
     return FP.capacityAfterHoles(profile, function(region)
@@ -61,6 +91,18 @@ local function updatePocket(owner, square)
             break
         end
     end
+end
+
+-- Only called after the timed action has revalidated its tools and materials.
+function FP.addAdditionalPocket(owner)
+    local available = FP.additionalPocketOptions(owner)
+    if not available then return false end
+    local data = owner:getModData()
+    local extra = data.FunctionalPocketsExtraRegions or {}
+    extra[#extra + 1] = available[ZombRand(#available) + 1]
+    data.FunctionalPocketsExtraRegions = extra
+    updatePocket(owner, nil)
+    return true
 end
 
 -- Damage is normally acquired while worn. Scan carried garments (also inside
@@ -114,6 +156,23 @@ local function install()
             local location = tostring(script:getBodyLocation())
             -- Native container item type is necessary; the original Java Clothing
             -- class is NOT retained. Do not use this path in a production save.
+            -- Capture actual coverage before changing the native item class.
+            profile.coveredRegions = {}
+            local bloodTypes = script:getBloodClothingType()
+            if bloodTypes then
+                local parts = BloodClothingType.getCoveredParts(bloodTypes)
+                local seen = {}
+                if parts then
+                    for j = 0, parts:size() - 1 do
+                        local region = tostring(parts:get(j))
+                        if not seen[region] and BloodBodyPartType[region]
+                            and BloodBodyPartType[region] ~= BloodBodyPartType.MAX then
+                            seen[region] = true
+                            profile.coveredRegions[#profile.coveredRegions + 1] = region
+                        end
+                    end
+                end
+            end
             script:setItemType(ItemType.CONTAINER)
             script:DoParam("CanBeEquipped", location)
             script:DoParam("Capacity", tostring(math.max(1, math.ceil(profile.capacity))))

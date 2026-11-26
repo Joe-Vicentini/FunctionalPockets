@@ -91,6 +91,28 @@ function FP.capacityAfterHoles(profile, hasHole)
     return math.ceil(profile.capacity * (count - damaged) / count), damaged
 end
 
+-- Instance profiles preserve the original per-pocket capacity and never mutate
+-- the shared classification tables.
+function FP.profileWithExtraPockets(profile, extra)
+    local regions = {}
+    local seen = {}
+    for _, region in ipairs(profile.pocketRegions or {}) do
+        regions[#regions + 1] = region
+        seen[region] = true
+    end
+    local count = profile.pocketCount
+    for _, region in ipairs(extra or {}) do
+        if not seen[region] then
+            regions[#regions + 1] = region
+            seen[region] = true
+            count = count + 1
+        end
+    end
+    return {capacity = profile.capacity * count / profile.pocketCount,
+        reduction = profile.reduction, maxItemSize = profile.maxItemSize,
+        pocketCount = count, pocketRegions = regions}
+end
+
 -- Pure classifier; adapters supply actual game metadata. Native storage is a hard guard.
 function FP.classify(id, name, location, tags, isClothing, hasStorage)
     if not isClothing or hasStorage or not location or location == "" then return nil end

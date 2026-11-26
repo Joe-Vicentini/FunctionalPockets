@@ -9,5 +9,9 @@
     "Sandbox_FunctionalPockets_ZombiePocketLoot_option3": "Pockets - Drop Overflow",
     "Sandbox_FunctionalPockets_ZombiePocketLoot_option4": "Pockets - Delete Overflow",
     "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles": "Pocket Capacity Loss from Holes",
-    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Holes in mapped pocket regions remove one pocket's share of the garment's original capacity per distinct damaged region (e.g. 1/4 for four pockets, 1/6 or 1/8 for cargo trousers). Remaining capacity is rounded upward. Random items fall onto the ground until the contents fit. Holes elsewhere do not count. Repairing holes restores capacity. Body regions are approximate; multiple pockets may share one region."
+    "Sandbox_FunctionalPockets_PocketCapacityLossFromHoles_tooltip": "Holes in mapped pocket regions remove one pocket's share of the garment's original capacity per distinct damaged region (e.g. 1/4 for four pockets, 1/6 or 1/8 for cargo trousers). Remaining capacity is rounded upward. Random items fall onto the ground until the contents fit. Holes elsewhere do not count. Repairing holes restores capacity. Body regions are approximate; multiple pockets may share one region.",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets": "Allow Sewing Additional Pockets",
+    "Sandbox_FunctionalPockets_AllowAdditionalPockets_tooltip": "Allows sewing one additional pocket onto a garment that already has pockets, using scissors, a needle, one thread use and one fabric strip. Each pocket adds the original average capacity per pocket, rounded upward for native storage. New pockets occupy a random unused, undamaged covered body region. The total presumed pocket count cannot exceed the garment's covered body-region count; existing garments above that limit are unchanged.",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed": "Additional Pocket Sewing Speed (%)",
+    "Sandbox_FunctionalPockets_AdditionalPocketSewingSpeed_tooltip": "Speed relative to vanilla sewing at the player's Tailoring level. 100% is normal speed, 200% is twice as fast, 50% is half as fast."
 }

@@ -89,3 +89,7 @@ Before treating the experiment as ready for gameplay, test native inventory tabs
 - [Functional Clothing Pockets Workshop description](https://steamcommunity.com/sharedfiles/filedetails/?id=3731578189) (technical reference only; no code copied).
 
 The vanilla catalog review is preliminary, not an exhaustive inspection of the installed game scripts. Standalone Lua tests are not in-game validation.
+
+## Additional sewn pockets
+
+Enable **Allow Sewing Additional Pockets** in Sandbox Options (off by default). Right-click a single carried pocket garment with scissors, needle, usable thread and a clean ripped sheet, denim strip or leather strip in carried inventory. The menu shows current presumed pocket count / actual covered body-region count. A completed action uses one fabric strip and one thread use; tools are retained. Each addition occupies a random unused covered region without a hole and adds the original average capacity per pocket. The native capacity is rounded up, and hole damage includes the additional regions when enabled. Added regions are stored in the garment's mod data, not on its shared script. Existing profiles with more presumed pockets than covered regions cannot receive additions. Weight reduction and maximum individual item size remain unchanged. **Additional Pocket Sewing Speed** defaults to 100% of vanilla patch sewing time (150 minus six ticks per Tailoring level); 200% halves duration. This is part of the experimental single-player conversion and needs in-game testing.
